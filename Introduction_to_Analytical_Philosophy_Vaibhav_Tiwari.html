@@ -1,0 +1,282 @@
+<!doctype html>\n<html lang="hi"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Introduction to Analytical Philosophy — Vaibhav Tiwari</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --card:#ffffff;
+      --accent:#1f6feb;
+      --accent2:#ff7a59;
+      --muted:#556;
+      --shadow: 0 8px 24px rgba(40,40,90,0.06);
+      font-family: "Noto Sans", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef6ff);
+      color:#112;
+      padding:20px;
+    }
+    .wrap{max-width:980px;margin:0 auto;}
+    header{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:grid;place-items:center;color:#fff;font-weight:700;font-size:22px;box-shadow:var(--shadow)
+    }
+    h1{margin:0;font-size:24px}
+    .meta{color:var(--muted);margin-top:6px;font-size:14px}
+
+    /* coloured table */
+    .essay-table{
+      width:100%;border-collapse:collapse;margin-top:18px;border-radius:12px;overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+    .essay-table th, .essay-table td{
+      padding:12px 14px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+    .essay-table thead th{
+      background:linear-gradient(90deg,#e6f0ff,#fff0e8);
+      color:var(--accent);
+      font-size:15px;
+      border-bottom:2px solid rgba(0,0,0,0.08);
+    }
+    .tag{display:inline-block;padding:6px 8px;border-radius:8px;font-size:13px;color:#fff}
+    .tag-core{background:#1f6feb}
+    .tag-method{background:#ff7a59}
+    .tag-aim{background:#00a86b}
+
+    /* MCQ section */
+    .mcq-wrap{margin-top:20px;display:grid;gap:10px}
+    .mcq{
+      background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow);border-left:6px solid rgba(31,111,235,0.12);
+    }
+    .mcq h3{margin:0 0 8px 0;font-size:16px}
+    .options{display:flex;flex-direction:column;gap:8px}
+    .opt{
+      padding:8px 10px;border-radius:8px;background:#f7f9ff;border:1px solid rgba(20,20,80,0.03);cursor:pointer;
+    }
+    .opt:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(31,111,235,0.06)}
+    .explain{display:none;margin-top:8px;padding:10px;background:#fff8f0;border-left:4px solid #ff7a59;border-radius:8px;color:#333}
+    .correct{background:#e6ffef;border-left-color:#00a86b}
+    .wrong{background:#fff0f0;border-left-color:#ff4d4d}
+
+    /* footer / share */
+    .share{
+      margin-top:18px;padding:12px;background:linear-gradient(90deg,#fff,#f6f9ff);border-radius:10px;display:flex;gap:12px;align-items:center;justify-content:space-between;
+    }
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+    .note{color:var(--muted);font-size:13px}
+
+    @media(max-width:720px){
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">द</div>
+      <div>
+        <h1>Introduction to Analytical Philosophy</h1>
+        <div class="meta">Prepared by <strong>Vaibhav Tiwari</strong> • Short overview + 10 MCQs with explanations</div>
+      </div>
+    </header>
+
+    <!-- Coloured Essay Table -->
+    <table class="essay-table" aria-label="Analytical Philosophy Overview">
+      <thead>
+        <tr>
+          <th>Section</th>
+          <th>Key Points</th>
+          <th>Why Important</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Core Idea</strong><div style="margin-top:6px"><span class="tag tag-core">Clarity &amp; Logic</span></div></td>
+          <td>Focuses on language analysis, meaning, and logical form. Seeks conceptual clarity by analyzing propositions and arguments.</td>
+          <td>Helps avoid confusion caused by vague language; central to analytic tradition since early 20th century.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Method</strong><div style="margin-top:6px"><span class="tag tag-method">Analysis</span></div></td>
+          <td>Use of formal logic, linguistic analysis and attention to everyday language. Emphasizes argument structure and verification.</td>
+          <td>Gives precise tools to test philosophical claims; bridges philosophy and logic/linguistics.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Aims</strong><div style="margin-top:6px"><span class="tag tag-aim">Clarity, Precision</span></div></td>
+          <td>To resolve philosophical problems by dissolving pseudo-problems (often linguistic confusions).</td>
+          <td>Leads to progress in philosophy of language, mind, knowledge, and science philosophy.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Key Figures</strong></td>
+          <td>Frege, Russell, Wittgenstein (early &amp; later), A.J. Ayer, Carnap, Quine, Ryle, Austin</td>
+          <td>Developed tools: formal logic, theory of descriptions, speech-act theory, ordinary-language analysis.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Criticisms</strong></td>
+          <td>Sometimes criticized for ignoring historical/contextual aspects and humanistic concerns; accused of narrowness.</td>
+          <td>Important to complement analytic methods with broader perspectives when necessary.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- MCQs -->
+    <div class="mcq-wrap" id="mcq-wrap">
+      <!-- Each MCQ block created in JS for convenience -->
+    <div class="mcq"><h3>1) Analytical philosophy primarily focuses on:</h3><div class="options"><div class="opt" tabindex="0">A. Historical interpretation of texts</div><div class="opt" tabindex="0">B. Language, logic and clarity</div><div class="opt" tabindex="0">C. Religious doctrines</div><div class="opt" tabindex="0">D. Art and aesthetics</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>2) Who is known for the 'theory of descriptions'?</h3><div class="options"><div class="opt" tabindex="0">A. G.W.F. Hegel</div><div class="opt" tabindex="0">B. Bertrand Russell</div><div class="opt" tabindex="0">C. Plato</div><div class="opt" tabindex="0">D. Immanuel Kant</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>3) Ludwig Wittgenstein's early work 'Tractatus' mainly aimed to:</h3><div class="options"><div class="opt" tabindex="0">A. Provide a history of philosophy</div><div class="opt" tabindex="0">B. Show limits of language and world correlation</div><div class="opt" tabindex="0">C. Describe political systems</div><div class="opt" tabindex="0">D. Explain empirical methods</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>4) Ordinary language philosophy (Austin, later Wittgenstein) emphasizes:</h3><div class="options"><div class="opt" tabindex="0">A. Formal symbolic logic only</div><div class="opt" tabindex="0">B. Analysis of everyday language use</div><div class="opt" tabindex="0">C. Economic models</div><div class="opt" tabindex="0">D. Religious texts</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>5) 'Verification principle' is primarily associated with which movement?</h3><div class="options"><div class="opt" tabindex="0">A. Existentialism</div><div class="opt" tabindex="0">B. Logical positivism</div><div class="opt" tabindex="0">C. Romanticism</div><div class="opt" tabindex="0">D. Phenomenology</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>6) Quine criticized the analytic-synthetic distinction. He argued:</h3><div class="options"><div class="opt" tabindex="0">A. That analytic truths are absolute</div><div class="opt" tabindex="0">B. That the boundary between analytic and synthetic is unclear</div><div class="opt" tabindex="0">C. That experience is irrelevant</div><div class="opt" tabindex="0">D. That language is identical to thought</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>7) In analytic tradition, 'conceptual analysis' means:</h3><div class="options"><div class="opt" tabindex="0">A. Testing hypotheses only experimentally</div><div class="opt" tabindex="0">B. Breaking down concepts into clearer components</div><div class="opt" tabindex="0">C. Writing poetry</div><div class="opt" tabindex="0">D. Studying ancient rituals</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>8) Which technique is NOT typical of analytic philosophy?</h3><div class="options"><div class="opt" tabindex="0">A. Formal logic</div><div class="opt" tabindex="0">B. Linguistic analysis</div><div class="opt" tabindex="0">C. Narrative hermeneutics</div><div class="opt" tabindex="0">D. Thought experiments</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>9) 'Speech-act theory' studies:</h3><div class="options"><div class="opt" tabindex="0">A. How language performs actions</div><div class="opt" tabindex="0">B. How to translate texts</div><div class="opt" tabindex="0">C. The history of philosophy</div><div class="opt" tabindex="0">D. Statistical linguistics</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div><div class="mcq"><h3>10) A common criticism of analytic philosophy is that it:</h3><div class="options"><div class="opt" tabindex="0">A. Is too focused on empirical experiments</div><div class="opt" tabindex="0">B. Is too literary</div><div class="opt" tabindex="0">C. Is overly narrow, ignoring broader human concerns</div><div class="opt" tabindex="0">D. Is the same as continental philosophy</div></div><div class="explain"><strong>Explanation:</strong> <span class="exp-text"></span></div></div></div>
+
+    <div class="share">
+      <div>
+        <div class="note">Share this as a webpage: save as <code>index.html</code> and upload to CodePen / Replit / GitHub Pages / Netlify. (See steps below)</div>
+      </div>
+      <div>
+        <a class="btn" href="#" id="downloadBtn">Download HTML</a>
+      </div>
+    </div>
+
+    <footer style="margin-top:18px;color:var(--muted);font-size:13px;text-align:center">
+      © <span id="yr">2025</span> • Prepared by Vaibhav Tiwari
+    </footer>
+  </div>
+
+  <script>
+    // Insert current year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // MCQ data
+    const mcqs = [
+      {
+        q: "1) Analytical philosophy primarily focuses on:",
+        opts: ["Historical interpretation of texts","Language, logic and clarity","Religious doctrines","Art and aesthetics"],
+        ans: 1,
+        exp: "Analytical philosophy emphasizes clarity in language and argumentation, using logic to analyze philosophical problems."
+      },
+      {
+        q: "2) Who is known for the 'theory of descriptions'?",
+        opts: ["G.W.F. Hegel","Bertrand Russell","Plato","Immanuel Kant"],
+        ans: 1,
+        exp: "Bertrand Russell developed the theory of descriptions to solve problems about reference in language."
+      },
+      {
+        q: "3) Ludwig Wittgenstein's early work 'Tractatus' mainly aimed to:",
+        opts: ["Provide a history of philosophy","Show limits of language and world correlation","Describe political systems","Explain empirical methods"],
+        ans: 1,
+        exp: "In Tractatus Wittgenstein explored how language pictures facts and aimed to show the limits of meaningful language."
+      },
+      {
+        q: "4) Ordinary language philosophy (Austin, later Wittgenstein) emphasizes:",
+        opts: ["Formal symbolic logic only","Analysis of everyday language use","Economic models","Religious texts"],
+        ans: 1,
+        exp: "Ordinary language philosophers argued that many philosophical confusions arise from misuse of everyday language."
+      },
+      {
+        q: "5) 'Verification principle' is primarily associated with which movement?",
+        opts: ["Existentialism","Logical positivism","Romanticism","Phenomenology"],
+        ans: 1,
+        exp: "Logical positivists (like A. J. Ayer) emphasized that a statement is meaningful if verifiable empirically or analytically."
+      },
+      {
+        q: "6) Quine criticized the analytic-synthetic distinction. He argued:",
+        opts: ["That analytic truths are absolute","That the boundary between analytic and synthetic is unclear","That experience is irrelevant","That language is identical to thought"],
+        ans: 1,
+        exp: "Quine challenged the clear-cut separation of analytic (true by meaning) and synthetic (true by facts) statements."
+      },
+      {
+        q: "7) In analytic tradition, 'conceptual analysis' means:",
+        opts: ["Testing hypotheses only experimentally","Breaking down concepts into clearer components","Writing poetry","Studying ancient rituals"],
+        ans: 1,
+        exp: "Conceptual analysis dissects concepts to reveal their logical form and remove ambiguities."
+      },
+      {
+        q: "8) Which technique is NOT typical of analytic philosophy?",
+        opts: ["Formal logic","Linguistic analysis","Narrative hermeneutics","Thought experiments"],
+        ans: 2,
+        exp: "Narrative hermeneutics (deep literary/historical interpretation) is more typical of continental traditions than analytic."
+      },
+      {
+        q: "9) 'Speech-act theory' studies:",
+        opts: ["How language performs actions","How to translate texts","The history of philosophy","Statistical linguistics"],
+        ans: 0,
+        exp: "Speech-act theory (Austin, Searle) shows that utterances can perform actions (e.g., 'I apologize')."
+      },
+      {
+        q: "10) A common criticism of analytic philosophy is that it:",
+        opts: ["Is too focused on empirical experiments","Is too literary","Is overly narrow, ignoring broader human concerns","Is the same as continental philosophy"],
+        ans: 2,
+        exp: "Critics say analytic philosophy can become too technical and neglect historical, cultural, or existential dimensions."
+      }
+    ];
+
+    const mcqWrap = document.getElementById('mcq-wrap');
+
+    mcqs.forEach((m, idx) => {
+      const block = document.createElement('div');
+      block.className = 'mcq';
+      const h = document.createElement('h3');
+      h.innerHTML = m.q;
+      block.appendChild(h);
+
+      const opts = document.createElement('div');
+      opts.className = 'options';
+      m.opts.forEach((o, i) => {
+        const opt = document.createElement('div');
+        opt.className = 'opt';
+        opt.tabIndex = 0;
+        opt.textContent = String.fromCharCode(65+i)+'. '+o;
+        opt.addEventListener('click', ()=> {
+          // clear previous explanation style
+          block.querySelectorAll('.opt').forEach(x=>x.classList.remove('selected'));
+          // mark selected visually
+          opt.classList.add('selected');
+          showExplanation(block, m, i);
+        });
+        opts.appendChild(opt);
+      });
+      block.appendChild(opts);
+
+      const ex = document.createElement('div');
+      ex.className = 'explain';
+      ex.innerHTML = '<strong>Explanation:</strong> <span class="exp-text"></span>';
+      block.appendChild(ex);
+
+      mcqWrap.appendChild(block);
+    });
+
+    function showExplanation(block, m, chosenIndex){
+      const ex = block.querySelector('.explain');
+      const span = ex.querySelector('.exp-text');
+      span.textContent = m.exp;
+      ex.style.display = 'block';
+
+      // style options for right/wrong
+      block.querySelectorAll('.opt').forEach((o, i)=>{
+        o.classList.remove('correct','wrong');
+        if(i === m.ans) o.classList.add('correct');
+        else if(i === chosenIndex) o.classList.add('wrong');
+      });
+    }
+
+    // Download HTML functionality
+    document.getElementById('downloadBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      const htmlContent = '<!doctype html>\\n' + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Introduction_to_Analytical_Philosophy_Vaibhav_Tiwari.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+
+
+</body></html>
